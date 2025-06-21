@@ -860,6 +860,14 @@ _Figure 3.1.1.4: Sequence Diagram (Join Carpool Group)_
 
 ##### 3.1.1.5 Reserve Parking Spot...........................................................................
 
+#### 3.1.1.5 Reserve Parking Spot
+- Users must be part of an approved carpool group before they are able to reserve a parking spot on campus. This requirement aims to encourage sustainable commuting and reduce the number of single-occupancy vehicles on campus. Carpooling is an integral part of the platform, as it optimizes the usage of parking spots and contributes to reducing campus traffic congestion.
+  
+- **Flexibility**: While carpooling is generally required for parking reservations, the system allows exceptions for special cases. Users may reserve parking without carpooling for **emergency parking**, **short-term parking**, or **VIP users**. These exceptions will be determined based on system rules or administrator approval.
+
+#### Justification for Flexibility:
+- The platform aims to be flexible and accommodate various needs, including users who may need parking for urgent or unforeseen circumstances. While carpooling is the default requirement, allowing some flexibility ensures that the system can still support diverse user needs.
+
 _Figure 3.1.1.5: Sequence Diagram (Reserve Parking Spot)_
 
 
