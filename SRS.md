@@ -1025,15 +1025,15 @@ _Table 3.2.1: Performance Requirement for User_
 
 #### 3.2.2 Admin.............................................................................................................
 
-| Performance Req No. | Description                                                                                                |
-| :------------------ | :--------------------------------------------------------------------------------------------------------- |
-| **PR8**             | The admin is able to update and store users’ data such as name,<br>contact information, and status.         |
-| **PR9**             | The admin can review user-submitted carpool requests, including<br>the requester's details, the date, time, and pickup and drop-off<br>locations. |
-| **PR10**            | The admin is able to validate ride details submitted by users,<br>ensuring the information is complete and accurate before approval. |
-| **PR11**            | The admin is able to approve or reject carpool requests based on the<br>submitted ride details.             |
-| **PR12**            | The admin is able to receive and view parking approval requests for<br>users linked to carpool bookings.     |
-| **PR13**            | The admin is able to update booking details and store them securely<br>in the database.                     |
-| **PR14**            | The admin is able to review user comments or feedback and store<br>them in the system for future reference.  |
+| **Performance Req No.** | **Description** | **Metric** |  
+|-------------------------|-----------------|------------|  
+| **PR8**                 | The admin must update and store users’ data (name, contact, status) securely in the database. | ≤ **2 seconds** for single-user updates. |  
+| **PR9**                 | The admin must review user-submitted carpool requests, including requester details, date, time, and locations. | ≤ **3 seconds** to load and display request data. |  
+| **PR10**                | The admin must validate ride details for completeness and accuracy before approval. | ≤ **4 seconds** to complete validation workflow. |  
+| **PR11**                | The admin must approve/reject carpool requests based on submitted ride details. | ≤ **2 seconds** to update request status. |  
+| **PR12**                | The admin must receive and view parking approval requests linked to carpool bookings. | ≤ **1 second** latency for real-time notifications. |  
+| **PR13**                | The admin must update booking details and store them securely in the database. | ≤ **3 seconds** for transaction completion. |  
+| **PR14**                | The admin must review and store user comments/feedback for future reference. | ≤ **2 seconds** to log and archive feedback. | 
 
 _Table 3.2.2 : Performance Requirement for Admin_
 
@@ -1673,7 +1673,7 @@ Figure 3.8.3.4: Notifications Steps_
     ● Requirement 3: Able to validate ride details submitted by users to ensure completeness and accuracy before approval.
     ● Requirement 4: Able to approve or reject carpool requests based on submitted ride details.
     ● Requirement 5: Able to receive and view parking approval requests linked to carpool bookings.
-    ● Requirement 6: Able to update booking details and securely store them in the database.
+    ● Requirement 6: Able to update booking details and securely store them in the database and the data stored in the database must use AES-256 encryption.
     ● Requirement 7: Able to review user comments or feedback and store them for future reference.
 
 
