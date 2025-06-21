@@ -2,3 +2,8 @@ Description of Changes: Replace with actual performance requirements (section 3.
 Date: 2025 June 21
 Author: Lau Kaixuan
 Reason: recorrect the content of the document.
+
+## Date: 22 June 2025
+- **Change Description**: Added **Voice Booking** as a future enhancement.
+- **Reason**: To improve accessibility and provide hands-free interactions for users.
+- **Author**: Thong Yun Peng
