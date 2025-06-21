@@ -912,6 +912,21 @@ _Figure 3.1.2.6: Update & Store Booking Data into Database Sequence Diagram_
 
 _Figure 3.1.2.7: Review & Store Comments or Feedbacks Sequence Diagram_
 
+### 3.1.2.8 Future Enhancement: Voice Booking
+
+**Description**:  
+In the future, the platform will include a **voice booking** functionality. This feature will allow users to make carpool and parking reservations via voice commands, enhancing the accessibility and convenience of the platform. Voice booking will integrate with popular voice assistants, such as **Amazon Alexa**, **Google Assistant**, or **Siri**, allowing users to interact with the system hands-free.
+
+**Justification**:  
+The inclusion of voice commands will cater to users who prefer a hands-free experience while driving or multitasking. It will also increase the platform's accessibility, allowing users with disabilities or those in situations where typing or using a screen is difficult to access the system more easily.
+
+**Scope**:  
+The voice booking feature will be implemented as a **future enhancement** once the core functionalities of the system (user registration, carpooling, parking reservation, and payment) are fully established. This feature will be available on both mobile and desktop platforms once integrated with the corresponding voice assistants.
+
+**Future Actions**:  
+- **Voice recognition integration**: Integration with voice assistant APIs.
+- **User interface modifications**: Adding voice command options in the UI.
+- **Testing and validation**: Ensuring that the voice commands work accurately in different environments and languages.
 
 #### 3.1.3 System Admin................................................................................................
 
