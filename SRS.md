@@ -1085,7 +1085,7 @@ making requests, altering data, or getting approvals, users ought to get prompt 
 confirmation messages. The system should minimize human input by providing features like
 dropdown menus and auto-fill where appropriate in order to lessen user effort. When mistakes occur,
 the system must provide concise, informative notifications together with easy-to-follow instructions
-on how to fix the problem. Additionally, the interface should follow basic accessibility standards to
+on how to fix the problem. Additionally, the interface must comply with WCAG 2.1 AA standards to
 support users with different needs, and overall system response time should not exceed 2 seconds to
 ensure a smooth and efficient user experience.
 
@@ -1384,8 +1384,7 @@ iteration) should have a restriction in size to 5 MB each file.
 Operational constraints establish the parameters in which the user side of the platform must be
 able to operate effectively and reliably.
 
-● The system must be available via modern web browsers (the latest versions of Chrome,
-Firefox, Safari, or Edge), with JavaScript enabled.
+● The system must be available via modern web browsers (Chrome v12.0+, Firefox v11.5+, Safari v17+, Edge v12.0+), with JavaScript enabled.
 
 ● A user must have internet access (minimum 1 Mbps) at the time of the interaction for
 successful interaction with real-time modules, including parking availability and chat.
@@ -1416,8 +1415,7 @@ wrong, the system should record it and alert the administrator so that it may be
 #### 3.7.2 Availability......................................................................................................
 
 The system will be accessible around-the-clock with the exception of planned maintenance
-times. It should be built to reduce downtime and guarantee consumers' constant access. The system
-must preserve user data integrity and deliver the proper messages in the event of a server or network
+times and the system must support failover clustering to ensure 99.9% availability. It should be built to reduce downtime and guarantee consumers' constant access. The system must preserve user data integrity and deliver the proper messages in the event of a server or network
 failure. Implementing system monitoring tools will guarantee high availability and prompt problem
 identification.
 
@@ -1441,12 +1439,7 @@ administration) is loosely connected and well-documented. This enables developer
 resolve bugs without disrupting other modules.
 
 Consistent naming conventions, extensive inline documentation, and devotion to best
-procedures (e.g., SOLID principles) shall be observed across the project. A version control system
-(Git) will be utilized for tracking source code modifications and enable rollbacks to stable versions as
-needed. Logs will be centralized and available to administrators, allowing for more effective
-troubleshooting and performance monitoring. Configuration parameters (such as database credentials
-and API keys) will be saved independently from the code to allow for easy updates without requiring
-code modifications. Maintenance processes and apprised schedules will be detailed for administrators.
+procedures (e.g., SOLID principles) shall be observed across the project. A Git will be used for version control, with changelog.md tracking all changes will be used to utilized for tracking source code modifications and enable rollbacks to stable versions as needed. Logs will be centralized and available to administrators, allowing for more effective troubleshooting and performance monitoring. Configuration parameters (such as database credentials and API keys) will be saved independently from the code to allow for easy updates without requiring code modifications. Maintenance processes and apprised schedules will be detailed for administrators.
 
 #### 3.7.5 Portability.......................................................................................................
 
@@ -1741,7 +1734,7 @@ understanding of what the system has to do.
 
 **5. Feedback and Notifications**
 
-● Users will be able to submit feedback and assess their ride experiences.
+● Users will be able to submit feedback and assess their ride experiences and the feedback must be tagged with priority levels for stakeholder review.
 
 ● The system will send notifications for requests, updates, and confirmations in real-time.
 
