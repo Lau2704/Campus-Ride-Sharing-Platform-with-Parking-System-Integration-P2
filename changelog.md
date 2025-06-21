@@ -7,3 +7,8 @@ Reason: recorrect the content of the document.
 - **Change Description**: Added **Voice Booking** as a future enhancement.
 - **Reason**: To improve accessibility and provide hands-free interactions for users.
 - **Author**: Thong Yun Peng
+
+## 22 June 2025
+- **Change Description**: Updated the "Reserve Parking Spot" section in the SRS.md to include flexibility of carpooling. This allows exceptions for special cases, such as **emergency parking**, **short-term parking needs**, or **VIP users**, who may reserve parking without joining a carpool group.
+- **Reason**: To address stakeholder concerns and provide flexibility for users with different parking needs. This ensures that the system accommodates both carpooling users and those with special circumstances.
+- **Author**: Thong Yun Peng
