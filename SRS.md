@@ -1116,9 +1116,7 @@ in harmony with standard communication protocols and data forms to facilitate se
 
 #### 3.4.1.2 User Interface
 
-The system shall provide an intuitive and responsive interface accessible through both
-desktop and mobile browsers. The interface will vary slightly depending on the role (User, Admin,
-System Admin, System Monitor), ensuring role-based access and operations.
+The system shall provide an intuitive and responsive interface accessible through both desktop and mobile browsers. The interface will vary slightly depending on the role (User, Admin, System Admin, System Monitor), ensuring role-based access and operations and the interface must comply with WCAG 2.1 AA for accessibility
 
 ###### 3.4.1.2.1 General Layout............................................................................
 
