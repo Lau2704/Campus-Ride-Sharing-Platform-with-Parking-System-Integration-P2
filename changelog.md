@@ -17,3 +17,8 @@
 - **Change Description**: fix clarity issue, missing information, and update for the document.
 - **Reason**: recorrect the content of the document.
 - **Author**: Lau Kaixuan
+
+## Date: 22 June 2025
+- **Change Description**: Add quantifiable metrics for reliability.
+- **Reason**: To provide a clear and measurable standard for system reliability.
+- **Author**: Lau Kaixuan

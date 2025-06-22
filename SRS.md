@@ -1404,7 +1404,7 @@ security reasons.
 
 #### 3.7.1 Reliability.......................................................................................................
 
-The system shall operate consistently and perform its intended functions under defined
+The system shall operate consistently with the uptime of 99.9%, and perform its intended functions under defined
 conditions without failure. It should be able to seamlessly recover from unforeseen problems and
 manage several user requests without crashing. To guarantee system dependability, regular
 testing—including unit, integration, and system testing—must be carried out. If something goes
