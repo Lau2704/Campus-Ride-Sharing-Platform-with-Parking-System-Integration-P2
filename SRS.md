@@ -42,7 +42,7 @@
             - 1.3.2.1.5 Reserve Parking Spot.................................................................
             - 1.3.2.1.6 Make Payment............................................................................
             - 1.3.2.1.7 Leave Feedback.........................................................................
-         - 1.3.2.2 Admin....................................................................................................
+         - 1.3.2.2 Administrator....................................................................................................
             - 1.3.2.2.1 Update & Store Users’ Data.........................................................
             - 1.3.2.2.2 Review Carpool Request.............................................................
             - 1.3.2.2.3 Validate Ride Details....................................................................
@@ -79,7 +79,7 @@
          - 3.1.1.5 Reserve Parking Spot...........................................................................
          - 3.1.1.6 Make Payment......................................................................................
          - 3.1.1.2 Leave Feedback...................................................................................
-      - 3.1.2 Admin.............................................................................................................
+      - 3.1.2 Administrator.............................................................................................................
          - 3.1.2.1 Update & Store Users’ Data..................................................................
          - 3.1.2.2 Review Carpool Request......................................................................
          - 3.1.2.3 Validate Ride Details.............................................................................
@@ -87,7 +87,7 @@
          - 3.1.2.5 Receive Parking Approval.....................................................................
          - 3.1.2.6 Update & Store Booking Data into Database........................................
          - 3.1.2.7 Review & Store Comments or Feedback..............................................
-      - 3.1.3 System Admin................................................................................................
+      - 3.1.3 System Administrator................................................................................................
          - 3.1.3.1 Update Status to Users.........................................................................
          - 3.1.3.2 Retrieve Availability...............................................................................
          - 3.1.3.3 Display Slot...........................................................................................
@@ -104,8 +104,8 @@
          - 3.1.4.6 Update Data of Parking Reserved........................................................
    - 3.2 Performance requirements.....................................................................................
       - 3.2.1 User...............................................................................................................
-      - 3.2.2 Admin.............................................................................................................
-      - 3.2.3 System Admin................................................................................................
+      - 3.2.2 Administrator.............................................................................................................
+      - 3.2.3 System Administrator................................................................................................
       - 3.2.4 System Monitor..............................................................................................
    - 3.3 Usability Requirements...........................................................................................
    - 3.4 Interface Requirements..........................................................................................
@@ -181,7 +181,7 @@ approval workflows managed by group leaders and system administrators.
 ● Real-time Parking Management: Displays live parking availability in designated campus
 zones, allowing approved carpools to make reservations.
 
-● Comprehensive Administration: Provides an admin panel for efficient management of
+● Comprehensive Administration: Provides an administrator panel for efficient management of
 requests and proactive system monitoring.
 
 ● Enhanced User Experience: Incorporates notifications and feedback mechanisms for quality
@@ -199,7 +199,7 @@ The platform encourages green transportation by allowing users to create or join
 reducing single-occupancy vehicle trips to campus. Once a carpool has been approved, users can
 reserve parking spots depending on real-time parking capacity within designated campus areas. The
 system uses university digital ID authentication to provide access to the service by authenticated users
-only. It also supports an admin dashboard for handling ride and parking requests, approving requests,
+only. It also supports an administrator dashboard for handling ride and parking requests, approving requests,
 and monitoring system activity. The users are also informed about booking statuses and can provide
 feedback after completing their rides. By combining carpool coordination and parking management,
 this website will streamline campus traffic flow, optimize parking capacity, and promote more
@@ -227,7 +227,7 @@ The platform consists of four key roles:
     ○ Make Payments
     ○ Leaves Feedback
 
-**2. Admin**
+**2. Administrator**
 
     ○ Update And Store Users Data
     ○ Review Carpool Request
@@ -271,7 +271,7 @@ module-to-module communication.
 | **University Authentication System** | The platform will integrate with the university’s Single Sign-On (SSO) or student/staff login portal to authenticate users based on their University ID                     | Ensures that only verified MMU students and staff can access and use the platform.                      |
 | **Centralised Database System**      | Stores data related to user profile, carpool group information, parking slots, bookings and feedback                                                                       | Enable persistent data storage, retrieval and management of platform-related activities                 |
 | **User Browser**              | The platform provides a user-friendly and responsive web interface where users can log in, view parking availability, manage carpools, and make bookings.                  | Facilitates interaction between users and the system.                                                   |
-| **Web-based Admin Dashboard** | A secure panel for administrators to view and manage carpool requests, monitor parking lot usage, approve/reject bookings, and handle feedback                            | Enables efficient system management and oversight.                                                      |
+| **Web-based Administrator Dashboard** | A secure panel for administrators to view and manage carpool requests, monitor parking lot usage, approve/reject bookings, and handle feedback                            | Enables efficient system management and oversight.                                                      |
 | **Notification System**       | Send updates to user regarding carpool status, parking reservation confirmation and feedback request                                                                      | Keeps users informed about their interactions with the system in real-time.                             |
 
 _Figure 1.3.1.1: Table of System Interface for Ride-Sharing Platform_
@@ -348,8 +348,8 @@ _Table 1.3.2.1.2: Fill in required informations_
 | **Description**       | Allows a user to create a new carpool group and provide ride information, such as time, route, and capacity, with a maximum of 4 users per group. |
 | **Primary Actor**     | User                                                                                                |
 | **Precondition**      | ● User is logged in<br>● User profile contains verified vehicle details                             |
-| **Postcondition**     | Carpool group request is submitted for admin approval                                               |
-| **Main Success Scenario** | 1. User navigates to "Create Carpool Group"<br>2. User enters ride information,including the number of the carpool participants where the maksimum value is 4.<br>3. User submits the form<br>4. System validates data and ensures group size is within limits.<br>5. System submits request to admin for review |
+| **Postcondition**     | Carpool group request is submitted for administrator approval                                               |
+| **Main Success Scenario** | 1. User navigates to "Create Carpool Group"<br>2. User enters ride information,including the number of the carpool participants where the maksimum value is 4.<br>3. User submits the form<br>4. System validates data and ensures group size is within limits.<br>5. System submits request to administrator for review |
 | **Alternative Scenario** | ● If required data is missing: system prompts user to complete<br>● If submission fails: system shows error message<br>● If the entered group size exceeds 4: system displays an error message stating 'Carpool group cannot exceed 4 users.' |
 
 _Table 1.3.2.1.3: Creating Carpool group_
@@ -416,7 +416,7 @@ _Table 1.3.2.1.6: Make Payment_
 
 _Table 1.3.2.1.7: Leave Feedback_
 
-##### 1.3.2.2 Admin....................................................................................................
+##### 1.3.2.2 Administrator....................................................................................................
 
 ###### 1.3.2.2.1 Update & Store Users’ Data.........................................................
 
@@ -424,12 +424,12 @@ _Table 1.3.2.1.7: Leave Feedback_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Update & Store Users' Data                                                                          |
 | **Version**           | 1                                                                                                   |
-| **Description**       | Admin updates and stores user-related data (profile info, carpool history, preferences) to maintain accurate data for efficient platform management |
-| **Primary Actor**     | Admin                                                                                               |
-| **Precondition**      | ● Admin is authenticated<br>● Access to user data management module granted                         |
+| **Description**       | Administrator updates and stores user-related data (profile info, carpool history, preferences) to maintain accurate data for efficient platform management |
+| **Primary Actor**     | Administrator                                                                                               |
+| **Precondition**      | ● Administrator is authenticated<br>● Access to user data management module granted                         |
 | **Postcondition**     | ● Users' data updated in database<br>● Data retrievable accurately by system/relevant actors        |
-| **Main Success Scenario** | 1. Admin logs into system<br>2. Admin navigates to user data management<br>3. Admin selects user profile<br>4. Admin edits fields (name, email, contact, car details)<br>5. Admin submits changes<br>6. System updates database<br>7. Confirmation message shown |
-| **Alternative Scenario** | ● If user profile doesn't exist: system displays error<br>● If data validation fails: system prompts correction<br>● If database update fails: system logs error and notifies admin |
+| **Main Success Scenario** | 1. Administrator logs into system<br>2. Administrator navigates to user data management<br>3. Administrator selects user profile<br>4. Administrator edits fields (name, email, contact, car details)<br>5. Administrator submits changes<br>6. System updates database<br>7. Confirmation message shown |
+| **Alternative Scenario** | ● If user profile doesn't exist: system displays error<br>● If data validation fails: system prompts correction<br>● If database update fails: system logs error and notifies administrator |
 
 _Table 1.3.2.2.1: Update & Store Users’ Data_
 
@@ -439,12 +439,12 @@ _Table 1.3.2.2.1: Update & Store Users’ Data_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Review Carpool Request                                                                              |
 | **Version**           | 1.0                                                                                                 |
-| **Description**       | Allows Admin to review carpool group creation requests, evaluating ride details (driver info, time, location, capacity) to ensure platform compliance |
-| **Primary Actor**     | Admin                                                                                               |
-| **Precondition**      | ● Admin logged in with access to carpool management<br>● At least one carpool request submitted     |
+| **Description**       | Allows Administrator to review carpool group creation requests, evaluating ride details (driver info, time, location, capacity) to ensure platform compliance |
+| **Primary Actor**     | Administrator                                                                                               |
+| **Precondition**      | ● Administrator logged in with access to carpool management<br>● At least one carpool request submitted     |
 | **Postcondition**     | Request either approved (becomes active) or rejected with reason recorded                           |
-| **Main Success Scenario** | 1. Admin logs into system<br>2. Admin navigates to carpool management<br>3. Admin views pending requests<br>4. Admin selects and reviews ride details<br>5. Admin verifies information accuracy/completeness<br>6. Admin approves request<br>7. System updates status and notifies requester |
-| **Alternative Scenario** | ● If details incomplete/invalid: Admin rejects with reason → system notifies requester<br>● If status update fails: error shown and logged |
+| **Main Success Scenario** | 1. Administrator logs into system<br>2. Administrator navigates to carpool management<br>3. Administrator views pending requests<br>4. Administrator selects and reviews ride details<br>5. Administrator verifies information accuracy/completeness<br>6. Administrator approves request<br>7. System updates status and notifies requester |
+| **Alternative Scenario** | ● If details incomplete/invalid: Administrator rejects with reason → system notifies requester<br>● If status update fails: error shown and logged |
 
 _Table 1.3.2.2.2: Review Carpool Request_
 
@@ -454,12 +454,12 @@ _Table 1.3.2.2.2: Review Carpool Request_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Validate Ride Details                                                                               |
 | **Version**           | 1.0                                                                                                 |
-| **Description**       | Admin validates ride details submitted for carpool creation/update, ensuring compliance with platform policies (driver credentials, pickup/drop-off points, schedule, capacity) |
-| **Primary Actor**     | Admin                                                                                               |
+| **Description**       | Administrator validates ride details submitted for carpool creation/update, ensuring compliance with platform policies (driver credentials, pickup/drop-off points, schedule, capacity) |
+| **Primary Actor**     | Administrator                                                                                               |
 | **Precondition**      | Ride details submitted by user and pending validation                                               |
 | **Postcondition**     | Ride details either validated (ready for approval) or flagged for correction                        |
-| **Main Success Scenario** | 1. Admin logs into system<br>2. Admin navigates to pending ride submissions<br>3. Admin selects ride<br>4. Admin verifies completeness and compliance (license validity, schedule appropriateness)<br>5. Admin marks as "validated"<br>6. System updates status and notifies parties |
-| **Alternative Scenario** | ● If details missing/invalid: Admin marks as "invalid" with correction notes → system notifies user to revise/resubmit |
+| **Main Success Scenario** | 1. Administrator logs into system<br>2. Administrator navigates to pending ride submissions<br>3. Administrator selects ride<br>4. Administrator verifies completeness and compliance (license validity, schedule appropriateness)<br>5. Administrator marks as "validated"<br>6. System updates status and notifies parties |
+| **Alternative Scenario** | ● If details missing/invalid: Administrator marks as "invalid" with correction notes → system notifies user to revise/resubmit |
 
 _Table 1.3.2.2.3: Validate Ride Details_
 
@@ -469,12 +469,12 @@ _Table 1.3.2.2.3: Validate Ride Details_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Approve/Reject Carpools Request                                                                     |
 | **Version**           | 1.0                                                                                                 |
-| **Description**       | Admin approves or rejects validated carpool requests. Approval activates carpool for joining; rejection prevents listing with reason stored. |
-| **Primary Actor**     | Admin                                                                                               |
-| **Precondition**      | ● Admin logged into system<br>● Ride details already validated                                      |
+| **Description**       | Administrator approves or rejects validated carpool requests. Approval activates carpool for joining; rejection prevents listing with reason stored. |
+| **Primary Actor**     | Administrator                                                                                               |
+| **Precondition**      | ● Administrator logged into system<br>● Ride details already validated                                      |
 | **Postcondition**     | Request either approved (published) or rejected (with reason stored)                                |
-| **Main Success Scenario** | 1. Admin logs into system<br>2. Admin navigates to validated requests<br>3. Admin selects request<br>4. Admin reviews final information<br>5. Admin selects "Approve" or "Reject"<br>6. If approved: system activates carpool and notifies requester<br>7. If rejected: system stores reason and notifies requester |
-| **Alternative Scenario** | ● If additional info needed: Admin puts request on hold → contacts requester<br>● If status update fails: system logs error → displays message → admin retries/reports |
+| **Main Success Scenario** | 1. Administrator logs into system<br>2. Administrator navigates to validated requests<br>3. Administrator selects request<br>4. Administrator reviews final information<br>5. Administrator selects "Approve" or "Reject"<br>6. If approved: system activates carpool and notifies requester<br>7. If rejected: system stores reason and notifies requester |
+| **Alternative Scenario** | ● If additional info needed: Administrator puts request on hold → contacts requester<br>● If status update fails: system logs error → displays message → administrator retries/reports |
 
 _Table 1.3.2.2.4: Approve/Reject Carpool Request_
 
@@ -484,12 +484,12 @@ _Table 1.3.2.2.4: Approve/Reject Carpool Request_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Receive Parking Approval                                                                            |
 | **Version**           | 1.0                                                                                                 |
-| **Description**       | Admin receives parking approval status from System Monitor, then records and updates booking data for tracking/reporting |
-| **Primary Actor**     | Admin                                                                                               |
-| **Precondition**      | ● System Monitor has approved parking booking<br>● Admin logged in with booking management access   |
+| **Description**       | Administrator receives parking approval status from System Monitor, then records and updates booking data for tracking/reporting |
+| **Primary Actor**     | Administrator                                                                                               |
+| **Precondition**      | ● System Monitor has approved parking booking<br>● Administrator logged in with booking management access   |
 | **Postcondition**     | Parking booking status updated in system and stored in database                                     |
-| **Main Success Scenario** | 1. Admin logs into system<br>2. Admin navigates to parking approvals<br>3. Admin views approved bookings list<br>4. Admin verifies booking details<br>5. Admin confirms receipt and updates status<br>6. System logs update and sends user confirmation |
-| **Alternative Scenario** | ● If approval not received: Admin waits or requests update from System Monitor<br>● If status update fails: error logged → admin notified → admin retries/escalates |
+| **Main Success Scenario** | 1. Administrator logs into system<br>2. Administrator navigates to parking approvals<br>3. Administrator views approved bookings list<br>4. Administrator verifies booking details<br>5. Administrator confirms receipt and updates status<br>6. System logs update and sends user confirmation |
+| **Alternative Scenario** | ● If approval not received: Administrator waits or requests update from System Monitor<br>● If status update fails: error logged → administrator notified → administrator retries/escalates |
 
 _Table 1.3.2.2.5: Receive Parking Approval_
 
@@ -499,12 +499,12 @@ _Table 1.3.2.2.5: Receive Parking Approval_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Update & Store Booking Data into Database                                                           |
 | **Version**           | 1.0                                                                                                 |
-| **Description**       | Admin inputs and stores finalized booking data after carpool and parking approvals, maintaining complete records for reporting, tracking, and confirmation |
-| **Primary Actor**     | Admin                                                                                               |
-| **Precondition**      | ● Carpool request approved by Admin<br>● Parking reservation approved by System Monitor             |
+| **Description**       | Administrator inputs and stores finalized booking data after carpool and parking approvals, maintaining complete records for reporting, tracking, and confirmation |
+| **Primary Actor**     | Administrator                                                                                               |
+| **Precondition**      | ● Carpool request approved by Administrator<br>● Parking reservation approved by System Monitor             |
 | **Postcondition**     | Booking data stored in database                                                                     |
-| **Main Success Scenario** | 1. Admin logs into system<br>2. Admin navigates to booking management<br>3. Admin verifies both approvals are complete<br>4. Admin enters booking details (user info, ride info, parking slot, timing, cost)<br>5. Admin submits data<br>6. System stores data → sends user confirmation |
-| **Alternative Scenario** | ● If approvals incomplete: system blocks progress → displays notification<br>● If submission fails: system displays error → logs issue → admin retries/contacts support |
+| **Main Success Scenario** | 1. Administrator logs into system<br>2. Administrator navigates to booking management<br>3. Administrator verifies both approvals are complete<br>4. Administrator enters booking details (user info, ride info, parking slot, timing, cost)<br>5. Administrator submits data<br>6. System stores data → sends user confirmation |
+| **Alternative Scenario** | ● If approvals incomplete: system blocks progress → displays notification<br>● If submission fails: system displays error → logs issue → administrator retries/contacts support |
 
 _Table 1.3.2.2.6: Update & Store Data Booking into Database_
 
@@ -514,12 +514,12 @@ _Table 1.3.2.2.6: Update & Store Data Booking into Database_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Review & Store Comments or Feedbacks                                                                |
 | **Version**           | 1.0                                                                                                 |
-| **Description**       | Admin reviews user feedback about ride-sharing/parking experiences and stores relevant feedback for future reference, analysis, or improvement |
-| **Primary Actor**     | Admin                                                                                               |
+| **Description**       | Administrator reviews user feedback about ride-sharing/parking experiences and stores relevant feedback for future reference, analysis, or improvement |
+| **Primary Actor**     | Administrator                                                                                               |
 | **Precondition**      | Users have submitted feedback through the system                                                    |
 | **Postcondition**     | Feedback reviewed and either stored in database or flagged for further action                       |
-| **Main Success Scenario** | 1. Admin logs into system<br>2. Admin accesses feedback management module<br>3. Admin views new/unprocessed feedback<br>4. Admin reviews submissions for relevance/quality<br>5. Admin stores valid/constructive feedback<br>6. Admin flags feedback needing follow-up<br>7. System updates status to "Stored" or "Flagged" |
-| **Alternative Scenario** | ● If feedback contains inappropriate/abusive content: Admin flags and escalates to System Administration/moderation team |
+| **Main Success Scenario** | 1. Administrator logs into system<br>2. Administrator accesses feedback management module<br>3. Administrator views new/unprocessed feedback<br>4. Administrator reviews submissions for relevance/quality<br>5. Administrator stores valid/constructive feedback<br>6. Administrator flags feedback needing follow-up<br>7. System updates status to "Stored" or "Flagged" |
+| **Alternative Scenario** | ● If feedback contains inappropriate/abusive content: Administrator flags and escalates to System Administration/moderation team |
 
 _Table 1.3.2.2.7: Review & Store Comments or Feedbacks_
 
@@ -535,7 +535,7 @@ _Table 1.3.2.2.7: Review & Store Comments or Feedbacks_
 | **Primary Actor**     | System Administration                                                                               |
 | **Precondition**      | Status update exists and requires notification                                                      |
 | **Postcondition**     | User notified of updated status                                                                     |
-| **Main Success Scenario** | 1. System Administration accesses user management panel<br>2. Receives database updates from Admin/System Monitor<br>3. Reviews "pending notification sending" queue<br>4. Selects relevant booking/user<br>5. Updates status<br>6. System sends notification to user |
+| **Main Success Scenario** | 1. System Administration accesses user management panel<br>2. Receives database updates from Administrator/System Monitor<br>3. Reviews "pending notification sending" queue<br>4. Selects relevant booking/user<br>5. Updates status<br>6. System sends notification to user |
 | **Alternative Scenario** | ● If database error occurs: notification process halts → error logged<br>● If status update fails: system retries or alerts technical team |
 
 _Table 1.3.2.3.1: Update Status to Users_
@@ -550,7 +550,7 @@ _Table 1.3.2.3.1: Update Status to Users_
 | **Primary Actor**     | System Administration                                                                               |
 | **Precondition**      | ● System logged in<br>● Database operational                                                        |
 | **Postcondition**     | Parking availability retrieved and ready for display to users                                       |
-| **Main Success Scenario** | 1. Admin accesses parking availability module<br>2. System queries database<br>3. Current availability retrieved<br>4. Data displayed to end users |
+| **Main Success Scenario** | 1. Administrator accesses parking availability module<br>2. System queries database<br>3. Current availability retrieved<br>4. Data displayed to end users |
 | **Alternative Scenario** | ● If database timeout/failure occurs: system returns error → logs incident<br>● If retrieval fails: system displays cached data or maintenance message |
 
 _Table 1.3.2.3.2: Retrieves Availability from Database_
@@ -565,7 +565,7 @@ _Table 1.3.2.3.2: Retrieves Availability from Database_
 | **Primary Actor**     | System Administration                                                                               |
 | **Precondition**      | User requests parking slot information                                                              |
 | **Postcondition**     | User views updated list of available slots for reservation                                          |
-| **Main Success Scenario** | 1. Admin verifies slot data retrieval<br>2. System displays available parking slots to users<br>3. Users interact with list to make bookings |
+| **Main Success Scenario** | 1. Administrator verifies slot data retrieval<br>2. System displays available parking slots to users<br>3. Users interact with list to make bookings |
 | **Alternative Scenario** | ● If display fails: system shows error message or maintenance notification<br>● If outdated list shown: system triggers data refresh or alerts technical team |
 
 _Table 1.3.2.3.3: Display List of Slot to User_
@@ -580,8 +580,8 @@ _Table 1.3.2.3.3: Display List of Slot to User_
 | **Primary Actor**     | System Administration                                                                               |
 | **Precondition**      | ● User submits booking details<br>● Pricing scheme available in system                              |
 | **Postcondition**     | Total ride cost calculated and presented to user for payment                                             |
-| **Main Success Scenario** | 1. Admin verifies rate rules configuration<br>2. System calculates ride fee based on ride details<br>3. System calculates parking fee based on parking details,<br>4. System calculates total cost by summing ride and parking fees<br>5. Final cost displayed to the user |
-| **Alternative Scenario** | ● If pricing rules outdated/missing: system defaults to standard rate or shows error<br>● Admin corrects rates → triggers recalculation |
+| **Main Success Scenario** | 1. Administrator verifies rate rules configuration<br>2. System calculates ride fee based on ride details<br>3. System calculates parking fee based on parking details,<br>4. System calculates total cost by summing ride and parking fees<br>5. Final cost displayed to the user |
+| **Alternative Scenario** | ● If pricing rules outdated/missing: system defaults to standard rate or shows error<br>● Administrator corrects rates → triggers recalculation |
 
 _Table 1.3.2.3.4: Calculate Total Cost_
 
@@ -593,10 +593,10 @@ _Table 1.3.2.3.4: Calculate Total Cost_
 | **Version**           | 1.0                                                                                                 |
 | **Description**       | Verifies user payment information by cross-checking with payment gateway to confirm successful transactions |
 | **Primary Actor**     | System Administration                                                                               |
-| **Precondition**      | ● Payment made by user<br>● System Admin authenticated                                             |
+| **Precondition**      | ● Payment made by user<br>● System Administrator authenticated                                             |
 | **Postcondition**     | ● Payment verified and logged<br>● Status marked as "Paid"                                         |
-| **Main Success Scenario** | 1. System Admin accesses payment verification<br>2. System cross-checks transaction with gateway<br>3. Valid payment confirmed<br>4. Booking marked as paid |
-| **Alternative Scenario** | ● If payment mismatch/failure: system admin contacts user for resubmission → system logs failed verification |
+| **Main Success Scenario** | 1. System Administrator accesses payment verification<br>2. System cross-checks transaction with gateway<br>3. Valid payment confirmed<br>4. Booking marked as paid |
+| **Alternative Scenario** | ● If payment mismatch/failure: system administrator contacts user for resubmission → system logs failed verification |
 
 _Table 1.3.2.3.5: Verify Payments_
 
@@ -611,7 +611,7 @@ _Table 1.3.2.3.5: Verify Payments_
 | **Precondition**      | Successful booking completed                                                                        |
 | **Postcondition**     | User receives confirmation notification via platform, email, or SMS                                 |
 | **Main Success Scenario** | 1. System receives booking approval update<br>2. System Administration validates data<br>3. System triggers confirmation message<br>4. User receives and views notification |
-| **Alternative Scenario** | ● If notification fails: system retries sending<br>● If persistent failure: message stored in logs → admin notified |
+| **Alternative Scenario** | ● If notification fails: system retries sending<br>● If persistent failure: message stored in logs → administrator notified |
 
 _Table 1.3.2.3.6: Notify User with Invoice_
 
@@ -623,9 +623,9 @@ _Table 1.3.2.3.6: Notify User with Invoice_
 | **Version**           | 1.0                                                                                                 |
 | **Description**       | Monitors system logs for performance, error tracking, and audit purposes                            |
 | **Primary Actor**     | System Administration                                                                               |
-| **Precondition**      | ● System admin logged in with required permissions<br>● System generates logs regularly             |
+| **Precondition**      | ● System administrator logged in with required permissions<br>● System generates logs regularly             |
 | **Postcondition**     | ● Logs reviewed for errors, performance metrics, and suspicious activity<br>● Actions taken recorded |
-| **Main Success Scenario** | 1. Admin opens log monitoring module<br>2. Views logs using filters (date, action type)<br>3. Identifies issues or verifies normal operation<br>4. Takes corrective action if needed |
+| **Main Success Scenario** | 1. Administrator opens log monitoring module<br>2. Views logs using filters (date, action type)<br>3. Identifies issues or verifies normal operation<br>4. Takes corrective action if needed |
 | **Alternative Scenario** | ● If log module fails: temporary logs accessed manually<br>● If persistent failure: system alerts technical team for maintenance |
 
 _Table 1.3.2.3.7: Monitor Backend Logs_
@@ -672,7 +672,7 @@ _Table 1.3.2.4.2 Confirm & Update Available Slots_
 | **Primary Actor**     | System Monitor                                                                                      |
 | **Precondition**      | ● User authenticated<br>● Carpool group approved<br>● Payment verified (if required)                |
 | **Postcondition**     | Parking reservation request received and queued for review/processing                               |
-| **Main Success Scenario** | 1. User submits parking reservation<br>2. System Monitor receives request<br>3. Booking details logged (user ID, time, zone)<br>4. Triggers "Review Parking Booking" use case<br>5. Notifies admin/responsible process for approval |
+| **Main Success Scenario** | 1. User submits parking reservation<br>2. System Monitor receives request<br>3. Booking details logged (user ID, time, zone)<br>4. Triggers "Review Parking Booking" use case<br>5. Notifies administrator/responsible process for approval |
 | **Alternative Scenario** | ● If request has missing/invalid data: system rejects request → user notified to resubmit with correct information |
 
 _Table 1.3.2.4.3 Receive User’s Parking Booking_
@@ -702,7 +702,7 @@ _Table 1.3.2.4.4 Review Parking Booking_
 | **Primary Actor**     | System Monitor                                                                                      |
 | **Precondition**      | ● Parking booking request reviewed and validated<br>● Parking slot available                        |
 | **Postcondition**     | ● Slot reserved for user<br>● System availability updated<br>● Relevant parties notified            |
-| **Main Success Scenario** | 1. System Monitor selects reviewed booking<br>2. Confirms details validity and slot availability<br>3. Approves request<br>4. Updates system to mark slot reserved<br>5. Sends confirmation to user, admin, and system components |
+| **Main Success Scenario** | 1. System Monitor selects reviewed booking<br>2. Confirms details validity and slot availability<br>3. Approves request<br>4. Updates system to mark slot reserved<br>5. Sends confirmation to user, administrator, and system components |
 | **Alternative Scenario** | ● If slot unavailable during approval: system aborts process → user notified to make new reservation |
 
 _Table 1.3.2.4.5 Approve Parking Booking_
@@ -737,14 +737,14 @@ V. Users shall reserve a parking spot once their carpool is approved.
 VI. Users shall make parking payments through the system.
 VII. Users shall leave feedback or ratings based on their experience.
 
-2. Admin:
-    I. Admin shall update and store users' personal and carpool data.
-II. Admin shall review all new carpool creation and join requests.
-III. Admin shall validate carpool ride details such as participants and schedules.
-IV. Admin shall approve or reject carpool group requests.
-V. Admin shall receive parking approval notifications from the system monitor.
-VI. Admin shall update and store final booking data in the system database.
-VII. Admin shall review user feedback and comments for quality assurance.
+2. Administrator:
+    I. Administrator shall update and store users' personal and carpool data.
+II. Administrator shall review all new carpool creation and join requests.
+III. Administrator shall validate carpool ride details such as participants and schedules.
+IV. Administrator shall approve or reject carpool group requests.
+V. Administrator shall receive parking approval notifications from the system monitor.
+VI. Administrator shall update and store final booking data in the system database.
+VII. Administrator shall review user feedback and comments for quality assurance.
 
 3. System Administration:
     I. System Administration shall update booking or status notifications to users.
@@ -753,7 +753,7 @@ III. System Administration shall display a list of available parking slots to us
 IV. System Administration shall calculate the total cost including ride and parking.
 V. System Administration shall verify payment transactions.
 VI. System Administration shall send booking confirmation notifications via system and email.
-VII. System Admin shall monitor backend logs and handle technical errors.
+VII. System Administrator shall monitor backend logs and handle technical errors.
 
 4. System Monitor:
     I. System Monitor shall monitor real-time parking data feeds.
@@ -801,7 +801,7 @@ described in this document.
 | Term                   | Definition                                                                                                                          |
 | :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
 | **User**               | A student, staff, or faculty member of MMU who utilizes the platform to form/join carpools or reserve parking spots                   |
-| **Admin**              | The user role responsible for adding user information, checking/approving carpool requests, and modifying reservations                   |
+| **Administrator**              | The user role responsible for adding user information, checking/approving carpool requests, and modifying reservations                   |
 | **System Monitor**     | Assesses real-time parking spot availability, collects/maintains parking data, and approves parking reservations                     |
 | **System Administrator** | Supervises back-end actions to update reservation status, approve/deny payments, and send confirmations                           |
 | **Carpool Group**      | A group created by users to carpool together to/from campus; requires confirmation before use                                         |
@@ -883,7 +883,7 @@ Figure 3.1.1.6: Sequence Diagram (Make Payment)
 Figure 3.1.1.2: Sequence Diagram (Leave Feedback)
 ```
 
-#### 3.1.2 Admin.............................................................................................................
+#### 3.1.2 Administrator.............................................................................................................
 
 ##### 3.1.2.1 Update & Store Users’ Data..................................................................
 
@@ -936,7 +936,7 @@ The voice booking feature will be implemented as a **future enhancement** once t
 - **User interface modifications**: Adding voice command options in the UI.
 - **Testing and validation**: Ensuring that the voice commands work accurately in different environments and languages.
 
-#### 3.1.3 System Admin................................................................................................
+#### 3.1.3 System Administrator................................................................................................
 
 ##### 3.1.3.1 Update Status to Users.........................................................................
 
@@ -1031,32 +1031,32 @@ Figure 3.1.4.6: Update Data of Parking Reserved Sequence Diagram
 _Table 3.2.1: Performance Requirement for User_
 
 
-#### 3.2.2 Admin.............................................................................................................
+#### 3.2.2 Administrator.............................................................................................................
 
 | **Performance Req No.** | **Description** | **Metric** |  
 |-------------------------|-----------------|------------|  
-| **PR8**                 | The admin must update and store users’ data (name, contact, status) securely in the database. | ≤ **2 seconds** for single-user updates. |  
-| **PR9**                 | The admin must review user-submitted carpool requests, including requester details, date, time, and locations. | ≤ **3 seconds** to load and display request data. |  
-| **PR10**                | The admin must validate ride details for completeness and accuracy before approval. | ≤ **4 seconds** to complete validation workflow. |  
-| **PR11**                | The admin must approve/reject carpool requests based on submitted ride details. | ≤ **2 seconds** to update request status. |  
-| **PR12**                | The admin must receive and view parking approval requests linked to carpool bookings. | ≤ **1 second** latency for real-time notifications. |  
-| **PR13**                | The admin must update booking details and store them securely in the database. | ≤ **3 seconds** for transaction completion. |  
-| **PR14**                | The admin must review and store user comments/feedback for future reference. | ≤ **2 seconds** to log and archive feedback. | 
+| **PR8**                 | The administrator must update and store users’ data (name, contact, status) securely in the database. | ≤ **2 seconds** for single-user updates. |  
+| **PR9**                 | The administrator must review user-submitted carpool requests, including requester details, date, time, and locations. | ≤ **3 seconds** to load and display request data. |  
+| **PR10**                | The administrator must validate ride details for completeness and accuracy before approval. | ≤ **4 seconds** to complete validation workflow. |  
+| **PR11**                | The administrator must approve/reject carpool requests based on submitted ride details. | ≤ **2 seconds** to update request status. |  
+| **PR12**                | The administrator must receive and view parking approval requests linked to carpool bookings. | ≤ **1 second** latency for real-time notifications. |  
+| **PR13**                | The administrator must update booking details and store them securely in the database. | ≤ **3 seconds** for transaction completion. |  
+| **PR14**                | The administrator must review and store user comments/feedback for future reference. | ≤ **2 seconds** to log and archive feedback. | 
 
 _Table 3.2.2 : Performance Requirement for Admin_
 
 
-#### 3.2.3 System Admin................................................................................................
+#### 3.2.3 System Administrator................................................................................................
 
 | Performance Req No. | Description                                                                                                |
 | :------------------ | :--------------------------------------------------------------------------------------------------------- |
-| **PR15**            | The system must allow the System Admin to update a user's status<br>(e.g., booking, payment, approval) and send notifications within 2<br>seconds of initiating the action |
-| **PR16**            | Real-time slot availability data must be retrieved and displayed to<br>the System Admin within 1 second of request, assuming a<br>responsive database. |
-| **PR17**            | Users must be able to see the displayed list of slots updated by the<br>System Admin within 2 seconds of availability confirmation |
+| **PR15**            | The system must allow the System Administrator to update a user's status<br>(e.g., booking, payment, approval) and send notifications within 2<br>seconds of initiating the action |
+| **PR16**            | Real-time slot availability data must be retrieved and displayed to<br>the System Administrator within 1 second of request, assuming a<br>responsive database. |
+| **PR17**            | Users must be able to see the displayed list of slots updated by the<br>System Administrator within 2 seconds of availability confirmation |
 | **PR18**            | The system must calculate the total cost of a booking based on<br>parameters (e.g., time, slot type, carpooling status) within 1 second<br>of receiving user inputs. |
 | **PR19**            | Payment verification must be completed within 2 seconds, including<br>cross-checking with the payment gateway. |
 | **PR20**            | The system must send booking confirmations or invoices via email<br>or platform notifications to users within 1 second of validation |
-| **PR21**            | System logs must be accessible to the System Admin with filter<br>features (by date, action, type) within 3 seconds, even under high<br>load. |
+| **PR21**            | System logs must be accessible to the System Administrator with filter<br>features (by date, action, type) within 3 seconds, even under high<br>load. |
 
 _Table 3.2.3 : Performance Requirement for System Administration_
 
@@ -1116,7 +1116,7 @@ in harmony with standard communication protocols and data forms to facilitate se
 
 #### 3.4.1.2 User Interface
 
-The system shall provide an intuitive and responsive interface accessible through both desktop and mobile browsers. The interface will vary slightly depending on the role (User, Admin, System Admin, System Monitor), ensuring role-based access and operations and the interface must comply with WCAG 2.1 AA for accessibility
+The system shall provide an intuitive and responsive interface accessible through both desktop and mobile browsers. The interface will vary slightly depending on the role (User, Administrator, System Administrator, System Monitor), ensuring role-based access and operations and the interface must comply with WCAG 2.1 AA for accessibility
 
 ###### 3.4.1.2.1 General Layout............................................................................
 
@@ -1142,9 +1142,9 @@ The system shall provide an intuitive and responsive interface accessible throug
 
 ● **Feedback Form** – Allows users to submit ratings and comments.
 
-**Admin Interface**
+**Administrator Interface**
 
-● **Login Page** – Admin authentication.
+● **Login Page** – Administrator authentication.
 
 ● **User Management** – Table view with update/edit capabilities.
 
@@ -1154,7 +1154,7 @@ The system shall provide an intuitive and responsive interface accessible throug
 
 ● **Feedback Viewer** – Sorted user feedback with filtering.
 
-**System Admin Interface**
+**System Administrator Interface**
 
 ● **Dashboard** – Summary of system operations and alerts.
 
@@ -1241,15 +1241,15 @@ Figure 3.5: Logical Database Requirements (Class Diagram)
 
 The UML class diagram for the Campus Ride-Sharing Platform With Parking System Integration models the core entities and relationships required
 for a seamless ride-sharing experience with mandatory parking reservations. At the foundation lies the abstract class UserAccount, which is inherited by four
-concrete user roles: User, Admin, SystemAdmin, and SystemMonitor. Each User can create or join multiple CarpoolGroups, submit CarpoolRequests, and
+concrete user roles: User, Administrator, SystemAdmin, and SystemMonitor. Each User can create or join multiple CarpoolGroups, submit CarpoolRequests, and
 make Bookings for rides. Every Booking is tightly coupled with a ParkingReservation and a Payment, forming a composition relationship since these entities
 cannot exist independently once a booking is made. The ParkingReservation is linked to a ParkingSpot, ensuring that a specific location is secured.
 
 Payments are processed through the Payment class and result in the generation of an Invoice. Users can also provide Feedback after each completed
 ride, and each Booking is associated with one such feedback entry. Additionally, Notifications are sent to users regarding system updates, carpool approvals,
-and reminders, reflecting a one-to-many association between UserAccount and Notification. Admin manages approvals for carpool requests and parking
+and reminders, reflecting a one-to-many association between UserAccount and Notification. Administrator manages approvals for carpool requests and parking
 reservations, while the SystemAdmin oversees platform-level verifications and payment audits. The SystemMonitor continuously observes Transactions and
-user activities to ensure transparency and integrity. Dependencies are modeled between classes like Admin and CarpoolRequest, and between Booking and
+user activities to ensure transparency and integrity. Dependencies are modeled between classes like Administrator and CarpoolRequest, and between Booking and
 CarpoolGroup, signifying temporary usage without strong ownership.
 
 
@@ -1342,7 +1342,7 @@ injection, XSS, and CSRF attacks.
 
 The system must enable secure connection between users and the server by implementing
 HTTPS protocols. Internally, RESTful APIs with JSON formatting will be used to standardize
-communication across components such as System Admin, Monitor, and Payment Gateway. Real-time
+communication across components such as System Administrator, Monitor, and Payment Gateway. Real-time
 status updates must be transmitted with a latency of no more than one second. In the event of message
 delivery problems (e.g., email or notification difficulties), the system must contain a retry mechanism
 to ensure vital messages are received.
@@ -1557,7 +1557,7 @@ system with ride-sharing_
 #### 3.8.2 Brainstorming.................................................................................................
 
 Brainstorming meetings for the Campus Ride-Sharing Platform were held with a diverse
-group of participants, including students (possible users), system administrators, admin and system
+group of participants, including students (possible users), system administrators, administrator and system
 monitoring staff. These sessions sought to identify major areas in current campus transportation,
 desirable features, and potential improvements towards parking and carpool services.
 
@@ -1571,7 +1571,7 @@ During brainstorming, participants highlighted:
 
 ● Instant notifications and invoice delivery post-booking or payment.
 
-● Admin-side monitoring tools for logs, availability, and approvals.
+● Administrator-side monitoring tools for logs, availability, and approvals.
 
 #### Benefits & Limitation
 
@@ -1665,7 +1665,7 @@ Figure 3.8.3.4: Notifications Steps_
     ● Requirement 6: Payment processing should be completed and confirmation shown to the user within 5 seconds.
     ● Requirement 7: Feedback submitted by the user should be stored and confirmation displayed within 2 seconds.
 
-**2. Admin Module**
+**2. Administrator Module**
 
     ● Requirement 1: Able to update and store users’ data such as name, contact information, and status.
     ● Requirement 2: Can review user-submitted carpool requests, including requester details, date, time, pickup, and drop-off locations.
@@ -1791,7 +1791,7 @@ classes works as expected.
 Creation” or “Joining Existing Carpool and Completing a Ride,” will be tested against the
 scenario flows.
 
-● **Functional Testing:** All use cases will be tested, including user login, admin approval,
+● **Functional Testing:** All use cases will be tested, including user login, administrator approval,
 payment handling, and notification delivery.
 
 ● **Validation Against UML Design:** Verification will also ensure that the final implementation
@@ -1811,7 +1811,7 @@ environments.
 ● **System Administration Team:** Will verify backend logs, monitor real-time parking data
 flows, and validate payment security.
 
-● **Admin and System Monitor Roles:** Participate in verification for request approval flows,
+● **Administrator and System Monitor Roles:** Participate in verification for request approval flows,
 feedback flagging, and system event logging.
 
 **When:**
@@ -1845,7 +1845,7 @@ users must be denied access.
 ● **Carpool Creation & Request:**
 
 A carpool group must not be created unless at least one other participant has been invited.
-Join requests must be reviewed and approved by the carpool creator or admin within 24 hours.
+Join requests must be reviewed and approved by the carpool creator or administrator within 24 hours.
 
 ● **Parking Reservation:**
 
@@ -1872,9 +1872,9 @@ response within 5 seconds. A transaction ID must be generated for each successfu
 All user actions (e.g., searching carpools, booking ride, loading parking zones) should
 complete in under 3 seconds under normal server load.
 
-● **Admin Actions:**
+● **Administrator Actions:**
 
-Admin should be able to view, approve, or reject any booking or carpool request in under 5
+Administrator should be able to view, approve, or reject any booking or carpool request in under 5
 seconds.
 
 ● **System Monitoring:**
@@ -1906,7 +1906,7 @@ data should be saved and viewable in the system.
 
 **2. University Authentication Integration:**
 
-    All users (students, staff, admin) are assumed to log in using valid MMU university
+    All users (students, staff, administrator) are assumed to log in using valid MMU university
     credentials.
 
 **3. Accurate Real-time Data Feeds:**

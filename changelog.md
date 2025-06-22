@@ -1,5 +1,5 @@
 ## Date: 2025 June 21
-- **Description of Changes**: Replace with actual performance requirements (section 3.2.2), Specify encryption standards for secure storage (section 3.9 Admin Module Requirements 6) and Add: "Interface must comply with WCAG 2.1 AA for accessibility."(section 3.4.1.2).
+- **Description of Changes**: Replace with actual performance requirements (section 3.2.2), Specify encryption standards for secure storage (section 3.9 Administrator Module Requirements 6) and Add: "Interface must comply with WCAG 2.1 AA for accessibility."(section 3.4.1.2).
 -**Author**: Lau Kaixuan
 -**Reason**: recorrect the content of the document.
 
@@ -31,4 +31,10 @@
 ## Date: 22 June 2025
 - **Change Description**: Updated the "Calculate Total Cost" use case (section 1.3.2.3.4) to include both ride and parking fee calculations. The description, main success scenario, and postcondition were modified to reflect the sum of both fees.
 - **Reason**: To align the total cost calculation with the updated use case, incorporating both ride and parking fees.
+- **Author**: Monish
+
+
+## Date: 22 June 2025
+- **Change Description**: Standardized inconsistent terminology by replacing 'Admin' with 'Administrator' to ensure the consistent use of 'Administrator' throughout the document.
+- **Reason**: To enhance clarity and maintain consistent terminology across the documentation, addressing a previously identified documentation defect.
 - **Author**: Monish
