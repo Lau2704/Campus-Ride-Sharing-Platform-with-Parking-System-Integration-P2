@@ -345,12 +345,12 @@ _Table 1.3.2.1.2: Fill in required informations_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Create Carpool Group                                                                                |
 | **Version**           | 1                                                                                                   |
-| **Description**       | Allows a user to create a new carpool group and provide ride information, such as time, route, and capacity. |
+| **Description**       | Allows a user to create a new carpool group and provide ride information, such as time, route, and capacity, with a maximum of 4 users per group. |
 | **Primary Actor**     | User                                                                                                |
 | **Precondition**      | ● User is logged in<br>● User profile contains verified vehicle details                             |
 | **Postcondition**     | Carpool group request is submitted for admin approval                                               |
-| **Main Success Scenario** | 1. User navigates to "Create Carpool Group"<br>2. User enters ride information<br>3. User submits the form<br>4. System validates data and submits request to admin for review |
-| **Alternative Scenario** | ● If required data is missing: system prompts user to complete<br>● If submission fails: system shows error message |
+| **Main Success Scenario** | 1. User navigates to "Create Carpool Group"<br>2. User enters ride information,including the number of the carpool participants where the maksimum value is 4.<br>3. User submits the form<br>4. System validates data and ensures group size is within limits.<br>5. System submits request to admin for review |
+| **Alternative Scenario** | ● If required data is missing: system prompts user to complete<br>● If submission fails: system shows error message<br>● If the entered group size exceeds 4: system displays an error message stating 'Carpool group cannot exceed 4 users.' |
 
 _Table 1.3.2.1.3: Creating Carpool group_
 

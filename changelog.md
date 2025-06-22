@@ -22,3 +22,8 @@
 - **Change Description**: Add quantifiable metrics for reliability.
 - **Reason**: To provide a clear and measurable standard for system reliability.
 - **Author**: Lau Kaixuan
+
+## Date: 22 June 2025
+- **Change Description**: Added a requirement stating 'Max 4 users/group' for carpools within the "Creating Carpool group" use case (section 1.3.2.1.3). This involved updating the use case description, main success scenario, and alternative scenario to reflect this capacity limit.
+- **Reason**: To define a clear functional constraint for carpool group formation, ensure efficient resource management, and align with typical vehicle capacities.
+- **Author**: Monish
