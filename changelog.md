@@ -27,3 +27,8 @@
 - **Change Description**: Added a requirement stating 'Max 4 users/group' for carpools within the "Creating Carpool group" use case (section 1.3.2.1.3). This involved updating the use case description, main success scenario, and alternative scenario to reflect this capacity limit.
 - **Reason**: To define a clear functional constraint for carpool group formation, ensure efficient resource management, and align with typical vehicle capacities.
 - **Author**: Monish
+
+## Date: 22 June 2025
+- **Change Description**: Updated the "Calculate Total Cost" use case (section 1.3.2.3.4) to include both ride and parking fee calculations. The description, main success scenario, and postcondition were modified to reflect the sum of both fees.
+- **Reason**: To align the total cost calculation with the updated use case, incorporating both ride and parking fees.
+- **Author**: Monish

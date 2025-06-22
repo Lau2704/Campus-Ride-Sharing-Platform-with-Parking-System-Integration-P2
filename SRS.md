@@ -576,11 +576,11 @@ _Table 1.3.2.3.3: Display List of Slot to User_
 | :-------------------- | :-------------------------------------------------------------------------------------------------- |
 | **Use Case Name**     | Calculate Total Cost                                                                                |
 | **Version**           | 1.0                                                                                                 |
-| **Description**       | Reviews and verifies correct cost calculation for reservations based on duration, slot type, and carpooling status |
+| **Description**       | Reviews and verifies correct cost calculation for reservations based on duration, slot type, and carpooling status,including both ride and parking fees |
 | **Primary Actor**     | System Administration                                                                               |
 | **Precondition**      | ● User submits booking details<br>● Pricing scheme available in system                              |
-| **Postcondition**     | Total cost calculated and presented to user for payment                                             |
-| **Main Success Scenario** | 1. Admin verifies rate rules configuration<br>2. System calculates cost based on input parameters<br>3. Final cost displayed to user |
+| **Postcondition**     | Total ride cost calculated and presented to user for payment                                             |
+| **Main Success Scenario** | 1. Admin verifies rate rules configuration<br>2. System calculates ride fee based on ride details<br>3. System calculates parking fee based on parking details,<br>4. System calculates total cost by summing ride and parking fees<br>5. Final cost displayed to the user |
 | **Alternative Scenario** | ● If pricing rules outdated/missing: system defaults to standard rate or shows error<br>● Admin corrects rates → triggers recalculation |
 
 _Table 1.3.2.3.4: Calculate Total Cost_
