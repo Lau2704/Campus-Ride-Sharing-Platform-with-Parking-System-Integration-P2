@@ -1557,8 +1557,8 @@ system with ride-sharing_
 #### 3.8.2 Brainstorming.................................................................................................
 
 Brainstorming meetings for the Campus Ride-Sharing Platform were held with a diverse
-group of participants, including students (possible users), system administrators, administrator and system
-monitoring staff. These sessions sought to identify major areas in current campus transportation,
+group of participants, including students (possible users), system administrators, administrator and system monitoring staff.
+These sessions sought to identify major areas in current campus transportation,
 desirable features, and potential improvements towards parking and carpool services.
 
 During brainstorming, participants highlighted:
@@ -1569,9 +1569,9 @@ During brainstorming, participants highlighted:
 
 ● Automated cost calculation for rides based on duration and group size.
 
-● Instant notifications and invoice delivery post-booking or payment.
+● Instant notifications and invoice delivery post booking or payment.
 
-● Administrator-side monitoring tools for logs, availability, and approvals.
+● Administrator-side monitoring tools for logs, availability, and request approvals.
 
 #### Benefits & Limitation
 
@@ -1670,7 +1670,7 @@ Figure 3.8.3.4: Notifications Steps_
     ● Requirement 1: Able to update and store users’ data such as name, contact information, and status.
     ● Requirement 2: Can review user-submitted carpool requests, including requester details, date, time, pickup, and drop-off locations.
     ● Requirement 3: Able to validate ride details submitted by users to ensure completeness and accuracy before approval.
-    ● Requirement 4: Able to approve or reject carpool requests based on submitted ride details.
+    ● Requirement 4: Able to approve or reject carpool requests based on submitted ride details .
     ● Requirement 5: Able to receive and view parking approval requests linked to carpool bookings.
     ● Requirement 6: Able to update booking details and securely store them in the database and the data stored in the database must use AES-256 encryption.
     ● Requirement 7: Able to review user comments or feedback and store them for future reference.
@@ -1684,7 +1684,7 @@ Figure 3.8.3.4: Notifications Steps_
     ● Requirement 4: System must calculate the total cost of a booking (based on parameters like time, slot type, carpooling status) within 1 second of receiving inputs.
     ● Requirement 5: Payment verification must be completed within 2 seconds, including cross-checking with the payment gateway.
     ● Requirement 6: System must send booking confirmations or invoices via email or platform notifications to users within 1 second of validation.
-    ● Requirement 7 Able to access system logs with filter features (by date, action, type) within 3 seconds, even under high load.
+    ● Requirement 7 Able to access system logs with filter features (by date, action, type) within 3 seconds, even under high server load.
 
 **4. System Monitor**
 
@@ -1726,22 +1726,24 @@ understanding of what the system has to do.
 
 **4. Payment Integration**
 
-● The system must support online payment for all parking and carpool related fees via FPX or equivalent.
+● The system must support online payment for all parking and carpool related fees via FPX or equivalent gateway.
 
 ● Payment status must be verified and recorded prior to confirmation of booking.
 
 **5. Feedback and Notifications**
 
-● Users will be able to submit feedback and assess their ride experiences and the feedback must be tagged with priority levels for stakeholder review.
+● Users will be able to submit feedback and assess their ride experiences and the feedback shall be tagged with priority levels for stakeholder review.
 
 ● The system will send notifications for requests, updates, and confirmations in real-time.
+
+● The system shall b e verified and recorded before booking confirmation.
 
 
 **Non-Functional Requirements:**
 
 **1. Performance**
 
-● The primary functionality for the system (login, booking, payment) will perform in <2–5 seconds.
+● The primary functionality for the system (login, booking, payment) will perform in under 2–5 seconds.
 
 ● The system will be able to accommodate many users simultaneously with no reduction in service.
 
@@ -1839,18 +1841,18 @@ Verification activities will take place in:
 
 ● **Login & Authentication:**
 
-The system must verify user identity through university ID and password. Unauthenticated
+The system shall verify user identity through university ID and password. Unauthenticated
 users must be denied access.
 
 ● **Carpool Creation & Request:**
 
-A carpool group must not be created unless at least one other participant has been invited.
+A carpool group should not be created unless at least one other participant has been invited.
 Join requests must be reviewed and approved by the carpool creator or administrator within 24 hours.
 
 ● **Parking Reservation:**
 
 Parking reservation should only be enabled after a carpool is approved. The system must
-check real-time slot availability before confirming.
+check real time slot availability before confirming.
 
 ● **Ride-Matching Algorithm:**
 
@@ -1884,7 +1886,7 @@ the System Monitor module.
 
 ● **Error Handling:**
 
-If any component fails (ride matching or payment), an error log should be generated and a
+If any system fails (ride matching or payment), an error log should be generated and a
 notification must be sent to System Administration within 1 minute.
 
 ● **Feedback Submission:**
